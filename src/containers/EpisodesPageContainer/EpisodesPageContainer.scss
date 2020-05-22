@@ -1,0 +1,10 @@
+.episodes-page-container {
+  padding-top: 15vh;
+
+  &__title {
+    font-size: 42px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+}
+
