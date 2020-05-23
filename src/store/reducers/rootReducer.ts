@@ -4,3 +4,5 @@ import {apiReducer} from "./apiReducer";
 export const rootReducer = combineReducers({
     api: apiReducer
 })
+
+export type RootState = ReturnType<typeof rootReducer>

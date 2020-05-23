@@ -1,0 +1,12 @@
+.base-button {
+  padding: 10px;
+  border: none;
+  background: #d4a300;
+  font-size: 20px;
+  font-family: 'Chelsea Market', cursive;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  &:hover {
+    box-shadow: #d4a300 5px 5px 15px;;
+  }
+}

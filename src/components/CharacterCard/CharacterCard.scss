@@ -1,0 +1,23 @@
+.character-card {
+  min-width: 300px;
+  min-height: 400px;
+  box-shadow: 5px 5px 20px;
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  &__info {
+    opacity: 0;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: .4s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

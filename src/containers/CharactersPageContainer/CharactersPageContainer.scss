@@ -6,6 +6,12 @@
     text-align: center;
     animation: fadeIn 2s ease-in-out;
   }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @keyframes fadeIn {
