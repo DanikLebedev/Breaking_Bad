@@ -2,7 +2,11 @@
   text-decoration: none;
   position: relative;
   font-size: 20px;
-  color: #000
+  color: #000;
+  transition: color .3s;
+  &:hover {
+    color: #d4a300;
+  }
 }
 
 

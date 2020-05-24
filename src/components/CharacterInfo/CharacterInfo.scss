@@ -1,16 +1,18 @@
+
+.appearance-item:after {
+  content: ',';
+}
+
+.appearance-item:last-child:after {
+  content: '';
+}
+
 .character-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
 
-  .appearance-item:after {
-    content: ',';
-  }
-
-  .appearance-item:last-child:after {
-    content: '';
-  }
 
   &__image-wrapper {
     min-width: 300px;

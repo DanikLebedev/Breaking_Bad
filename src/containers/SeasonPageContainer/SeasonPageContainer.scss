@@ -1,0 +1,11 @@
+.season-page-container {
+  padding-top: 15vh;
+  .season-bg {
+    filter:  brightness(0.8);
+  }
+  &__title {
+    text-align: center;
+    color: #d4a300;
+    animation: fadeIn 1.5s ease-in;
+  }
+}

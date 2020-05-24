@@ -1,0 +1,15 @@
+.episode-info {
+  background: #d4a300;
+  &__wrapper {
+    margin: 10px 0;
+  }
+
+  &__heading-button {
+    padding: 20px;
+    cursor: pointer;
+    transition: .4s;
+    &:hover {
+      box-shadow: #d4a300 5px 5px 15px;
+    }
+  }
+}

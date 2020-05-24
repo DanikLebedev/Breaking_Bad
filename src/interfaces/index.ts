@@ -34,9 +34,9 @@ export interface initStore {
 }
 
 export interface Episode {
-    id: number | null;
+    episode_id: number | null ;
     title: string;
-    season: number | null;
+    season: string;
     episode: number | null;
     air_date: string;
     characters: string[];
@@ -53,6 +53,7 @@ export interface FetchData {
 export interface FetchDataSuccess {
     type: typeof FETCH_ALL_CHARACTERS_SUCCESS | typeof FETCH_ALL_EPISODES_SUCCESS | typeof FETCH_CHARACTER_BY_ID_SUCCESS | typeof FETCH_EPISODES_BY_ID | typeof GET_ALL_SEASONS | typeof GET_SEASON_BY_ID,
     payload: DataTypes;
+    id?: string
 }
 
 export interface FetchDataError {

@@ -29,8 +29,8 @@ export const initialStore: initStore = {
         air_date: '',
         characters: [],
         episode: null,
-        id: null,
-        season: null,
+        episode_id: null,
+        season: '',
         series: '',
         title: ''
     },
@@ -76,11 +76,13 @@ export const apiReducer = (state = initialStore, action: fetchDataTypes): initSt
                 seasons: action.payload
             } as initStore
         case GET_SEASON_BY_ID:
+            console.log(action)
             return {
                 ...state,
                 loading: false,
-                seasons: state.seasons.filter(season => season.seasonId === action.payload)
-            }
+                seasons: state.seasons.filter(season => season.seasonId === action.id),
+                episodes: action.payload
+            } as initStore
         default:
             return state
     }
