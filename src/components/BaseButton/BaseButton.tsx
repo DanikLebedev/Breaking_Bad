@@ -8,7 +8,8 @@ interface BaseButtonProps {
 }
 
 export const BaseButton:FC<BaseButtonProps> = ({label, showMore, arg}) => {
+    const isArg = arg ? arg: undefined
     return (
-        <button className={'base-button'} onClick={() => showMore(arg)}>{label}</button>
+        <button className={'base-button'} onClick={() => showMore(isArg)}>{label}</button>
     )
 }

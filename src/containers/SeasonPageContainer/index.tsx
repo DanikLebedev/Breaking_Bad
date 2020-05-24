@@ -1,17 +1,17 @@
 import React from "react";
-import './HomePageContainer.scss'
+import {useParams} from "react-router";
 
-export const HomePageContainer = () => {
+export const SeasonPageContainer = () => {
+    const {id} = useParams()
     return (
         <div className="home-page-container">
             <div className="home-page-container__preview">
-                <img src={process.env.PUBLIC_URL + '/breaking-bad-banner.jpg'} alt="banner"/>
+                <img src={process.env.PUBLIC_URL + `/breaking_bad_${id}.jpg`} alt="banner"/>
             </div>
             <div className="container">
-                <h1 className={'home-page-container__title'}>Welcome to </h1>
+
             </div>
 
         </div>
-
     )
 }

@@ -3,9 +3,10 @@ import {
     FETCH_ALL_EPISODES_SUCCESS,
     FETCH_ALL_CHARACTERS_SUCCESS,
     FETCH_ALL_DATA_ERROR,
-    FETCH_CHARACTER_BY_ID_SUCCESS, FETCH_EPISODES_BY_ID
+    FETCH_CHARACTER_BY_ID_SUCCESS, FETCH_EPISODES_BY_ID, GET_ALL_SEASONS, GET_SEASON_BY_ID
 } from "../store/actions/actionTypes";
 import {Reducer} from "redux";
+import {SeasonProps} from "../components/SeasonCard";
 
 export interface Character {
     char_id: number | null;
@@ -27,7 +28,8 @@ export interface initStore {
     episodes: Episode[],
     loading: boolean,
     error: string,
-    currentCharacter: Character,
+    seasons: SeasonProps[]
+    currentCharacter: Character[],
     currentEpisode: Episode,
 }
 
@@ -42,14 +44,14 @@ export interface Episode {
 }
 
 
-export type DataTypes = Character[] | Episode[] | Character | Episode
+export type DataTypes = Character[] | Episode[] | Character | Episode | string | SeasonProps[] | SeasonProps
 
 export interface FetchData {
     type: typeof FETCH_ALL_DATA,
 }
 
 export interface FetchDataSuccess {
-    type: typeof FETCH_ALL_CHARACTERS_SUCCESS | typeof FETCH_ALL_EPISODES_SUCCESS | typeof FETCH_CHARACTER_BY_ID_SUCCESS | typeof FETCH_EPISODES_BY_ID,
+    type: typeof FETCH_ALL_CHARACTERS_SUCCESS | typeof FETCH_ALL_EPISODES_SUCCESS | typeof FETCH_CHARACTER_BY_ID_SUCCESS | typeof FETCH_EPISODES_BY_ID | typeof GET_ALL_SEASONS | typeof GET_SEASON_BY_ID,
     payload: DataTypes;
 }
 
@@ -59,3 +61,4 @@ export interface FetchDataError {
 }
 
 export type fetchDataTypes = FetchData | FetchDataSuccess | FetchDataError
+

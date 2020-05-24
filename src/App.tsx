@@ -7,6 +7,7 @@ import {CharactersPage} from "./pages/CharactersPage";
 import {EpisodePage} from "./pages/EpisodePage";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import {CharactersDetailPage} from "./pages/CharacterDetailPage";
+import {SeasonPage} from "./pages/SeasonPage";
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
             <CSSTransition key={location.key} classNames="slide" timeout={1000}>
                 <Switch location={location}>
                     <Route path="/" component={HomePage} exact/>
-                    <Route path="/characters/:id" component={CharactersDetailPage} />
-                    <Route path="/characters" component={CharactersPage}/>
-                    <Route path="/episodes" component={EpisodePage}/>
+                    <Route path="/characters/:id" component={CharactersDetailPage} exact />
+                    <Route path="/characters" component={CharactersPage} exact/>
+                    <Route path="/episodes/season/:id" component={SeasonPage} exact />
+                    <Route path="/episodes" component={EpisodePage} exact/>
                 </Switch>
             </CSSTransition>
         </TransitionGroup>
